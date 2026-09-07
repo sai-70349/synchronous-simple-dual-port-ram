@@ -48,51 +48,12 @@ The main objectives of this project are:
 
 ---
 
-# 6. Block Diagram / Architecture
+## 4. Block Diagram / Architecture
 
 The Synchronous Simple Dual-Port RAM consists of two independent ports: a **write port** and a **read port**. Each port operates using its own clock and control signals.
 
 ```text
-                         SYNCHRONOUS SIMPLE DUAL-PORT RAM
-                    ┌─────────────────────────────────────────┐
-                    │                                         │
-                    │              MEMORY ARRAY               │
-                    │                                         │
-                    │           16 × 32-bit RAM               │
-                    │                                         │
-                    │       Address Range: 0 – 15              │
-                    │                                         │
-                    └──────────────────┬──────────────────────┘
-                                       │
-                         ┌─────────────┴─────────────┐
-                         │                           │
-                         │                           │
-                  WRITE PORT                   READ PORT
-                         │                           │
-       ┌─────────────────┴──────────┐    ┌──────────┴─────────────────┐
-       │                            │    │                            │
-       │       Write Control        │    │        Read Control        │
-       │                            │    │                            │
-       │  wr_clk                    │    │  rd_clk                    │
-       │  cs_0                      │    │  cs_1                      │
-       │  wr_en                     │    │  rd_en                     │
-       │                            │    │                            │
-       └──────────────┬─────────────┘    └─────────────┬──────────────┘
-                      │                                │
-                      │                                │
-                ┌─────▼─────┐                    ┌─────▼─────┐
-                │ addr_wr   │                    │ addr_rd   │
-                │ data_in   │                    │ data_out  │
-                └───────────┘                    └───────────┘
-                      │                                │
-                      │ WRITE                          │ READ
-                      │                                │
-                      ▼                                ▼
-                ┌───────────┐                    ┌───────────┐
-                │ Write on  │                    │ Read on   │
-                │ posedge   │                    │ posedge   │
-                │ wr_clk    │                    │ rd_clk    │
-                └───────────┘                    └───────────┘
+![simple dual port block diagram](screenshots/block_diagram.png)
 ```
 
 ## Architecture Description
