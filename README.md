@@ -52,9 +52,9 @@ The main objectives of this project are:
 
 The Synchronous Simple Dual-Port RAM consists of two independent ports: a **write port** and a **read port**. Each port operates using its own clock and control signals.
 
-```text
+
 ![simple dual port block diagram](screenshots/block_diagram.png)
-```
+
 
 ## Architecture Description
 
@@ -187,7 +187,7 @@ This architecture allows the RAM to perform **independent synchronous write and 
 
 
 
-## 4. Technologies Used
+## 5. Technologies Used
 
 ### HDL
 
@@ -211,7 +211,7 @@ This architecture allows the RAM to perform **independent synchronous write and 
 
 ---
 
-## 5. Key Verification Features
+## 6. Key Verification Features
 
 The testbench verifies the following RAM functionality:
 
@@ -233,7 +233,7 @@ The testbench uses case equality (`===`) for data comparison so that unknown (`X
 
 ---
 
-## 6. RAM Interface Signals
+## 7. RAM Interface Signals
 
 | Signal     | Direction | Width | Description            |
 | ---------- | --------- | ----: | ---------------------- |
@@ -250,7 +250,7 @@ The testbench uses case equality (`===`) for data comparison so that unknown (`X
 
 ---
 
-## 7. RAM Operation
+## 8. RAM Operation
 
 ### Write Operation
 
@@ -304,7 +304,7 @@ The read output is registered, making this a **synchronous read RAM**.
 
 ---
 
-# 8. Verification Environment
+# 9. Verification Environment
 
 The project uses a **Verilog-based directed verification environment**.
 
@@ -350,7 +350,7 @@ The testbench contains:
 
 ---
 
-# 9. Test Cases
+# 10. Test Cases
 
 ## Test Case 1 — Single Write
 
@@ -552,7 +552,7 @@ data_out remains unchanged
 
 ---
 
-# 10. Project Structure
+# 11. Project Structure
 
 ```text
 sync-sdp-ram/
@@ -580,7 +580,7 @@ sync-sdp-ram/
 
 ---
 
-# 11. Simulation
+# 12. Simulation
 
 The design was simulated using **Siemens ModelSim**.
 
@@ -608,13 +608,13 @@ error count: 0
 
 ---
 
-# 12. Simulation Waveforms
+# 13. Simulation Waveforms
 
-```text
+
 ![Simulation Waveform](screenshots/simulation_waveform.png)
-```
 
-## 12.1 Single Write and Read
+
+## 13.1 Single Write and Read
 
 The waveform demonstrates:
 
@@ -637,61 +637,61 @@ During the read operation, the stored data appears on `data_out` after the posit
 
 Add the ModelSim screenshot here:
 
-```text
+
 ![Single Write and Read Waveform](screenshots/single_wr_rd.png)
-```
+
 
 ---
 
-## 12.2 Multiple Write and Read
+## 13.2 Multiple Write and Read
 
 This waveform demonstrates multiple write and read operations using different addresses and data values.
 
 ### Waveform
 
-```text
+
 ![Multiple Write and Read Waveform](screenshots/multiple_wr_rd.png)
-```
+
 
 ---
 
-## 12.3 All Writes
+## 13.3 All Writes
 
 This waveform demonstrates writing data to all 16 memory locations.
 
 ### Waveform
 
-```text
+
 ![All Writes Waveform](screenshots/all_writes.png)
-```
+
 
 ---
 
-## 12.4 All Reads
+## 13.4 All Reads
 
 This waveform demonstrates reading data from all 16 memory locations.
 
 ### Waveform
 
-```text
+
 ![All Reads Waveform](screenshots/all_reads.png)
-```
+
 
 ---
 
-## 12.5 Simultaneous Write and Read
+## 13.5 Simultaneous Write and Read
 
 This waveform demonstrates independent write and read operations occurring concurrently using separate clocks.
 
 ### Waveform
 
-```text
+
 ![Simultaneous Write and Read Waveform](screenshots/simultaneous_wr_rd.png)
-```
+
 
 ---
 
-# 13. ModelSim Simulation Using `run.do`
+# 14. ModelSim Simulation Using `run.do`
 
 The project includes a ModelSim `run.do` script to automate compilation, simulation, waveform addition, and execution.
 
@@ -747,7 +747,7 @@ run -all
 
 ---
 
-# 14. How to Run the Simulation
+# 15. How to Run the Simulation
 
 ## Method 1 — Using ModelSim GUI
 
@@ -796,7 +796,7 @@ The transcript displays the individual test results and the final verification s
 
 ---
 
-# 15. Expected Simulation Result
+# 16. Expected Simulation Result
 
 A successful simulation should report:
 
@@ -837,7 +837,7 @@ error count: 0
 
 ---
 
-# 16. Verification Result
+# 17. Verification Result
 
 | Verification Category   | Result |
 | ----------------------- | ------ |
@@ -854,7 +854,7 @@ error count: 0
 
 ---
 
-# 17. Author
+# 18. Author
 
 **Author:** Sai
 
